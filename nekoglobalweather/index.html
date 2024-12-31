@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neko Global Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <video src="videos/logo.mp4" autoplay loop muted id="logo-video"></video>
+        <h1>Neko Global Weather</h1>
+    </header>
+
+    <!-- Search Bar Section -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Enter city..." autocomplete="off">
+        <button id="search-button">Search</button>
+    </div>
+
+    <!-- Current Weather Section -->
+    <div class="weather-container">
+        <div id="city-name" class="weather-info"></div>
+        <div id="date-time" class="weather-info"></div>
+        <div id="weather-icon" class="weather-info"></div>
+        <div id="weather-temperature" class="weather-info"></div>
+        <div id="weather-description" class="weather-info"></div>
+
+        <!-- Weather Stats -->
+        <div class="weather-stats">
+            <div><strong>Wind Speed:</strong> <span id="wind-speed"></span></div>
+            <div><strong>Humidity:</strong> <span id="humidity"></span></div>
+            <div><strong>UV Index:</strong> <span id="uv-index"></span></div>
+            <div><strong>Pressure:</strong> <span id="pressure"></span></div>
+            <div><strong>Sunrise:</strong> <span id="sunrise"></span></div>
+            <div><strong>Sunset:</strong> <span id="sunset"></span></div>
+        </div>
+    </div>
+
+    <!-- 10-Day Forecast Section -->
+    <div id="forecast" class="forecast-container"></div>
+
+    <!-- Video and Music Section -->
+    <video id="weather-video" width="100%" height="auto" muted autoplay loop></video>
+    <audio id="weather-music" loop></audio>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Powered by OpenWeatherMap</p>
+        <p>Contact: shreejithisdumb@gmail.com | Phone: 7904106363</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
